@@ -42,7 +42,9 @@ body{
 .container__card{
 
     background-color: white;
-    width: 30rem;
+    max-width: 30rem;
+    min-height: 38rem;
+    border-radius: 15px;
 
 
 }
@@ -51,7 +53,21 @@ img{
 
     max-inline-size: 100%;
     block-size: auto;
-    object-fit: contain;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+
+}
+
+.card__element--image{
+
+ 
+
+}
+
+.card__element{
+
+    
+
 }
 
 
