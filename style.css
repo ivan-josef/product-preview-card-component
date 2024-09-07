@@ -10,6 +10,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    border: 0px;
 }
 
 :root{
@@ -25,34 +26,43 @@
 
 body{
     background-color: var(--cream);
+    min-height: 100vh;
+    
 }
 
 .container{
 
     min-height: 100vh;
-    max-width: 100vw;
+    margin: 10px 0px;
     
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 }
 
 .container__card{
 
+    display: flex;
+    flex-direction: column;
+
     background-color: white;
-    max-width: 25rem;
+    max-width: 25rem; /* o que eliminou a barra de rolagem horizontal foi ter um card menor que a viewport */
+    /* tem q ter esse entendimento: aqui o codigo é para mobile, a viewport é de ate 600px, entao o card esta tendo uma viewport de ate 400px*/
     border-radius: 15px;
-    height: 90vh;
+    /* antes eu tinha setado uma tag height com 90vh, mas era um dos problemas. a altura esta sendo configurada sempre no body, e no container */
+
 
 }
 
 img{
 
-    max-inline-size: 100%;
     block-size: auto;
     object-fit: cover;
     border-radius: 15px 15px 0px 0px;
+    max-inline-size: 100%;
+    height: auto;
+    
 
 }
 
@@ -67,11 +77,13 @@ img{
 
     color: var(--dark_grayish_blue);
     font-family: var(--montserrat);
-    font-size: clamp(0.875rem, 0.875rem + 1,5vw, 2rem);
+    font-size: clamp(0.875rem, 0.875rem + 1.5vw, 1rem);
+    line-height: 1.4rem;
+
     
 }
 
-.element__paragraph--perfume {
+.element__paragraph--spacebt {
     text-transform: uppercase;
     letter-spacing: 5px;
 }
@@ -80,18 +92,60 @@ img{
 
     font-family: var(--fraunces);
     padding: 15px 1px;
+    font-size: clamp(2.0rem, 2.0rem + 1.5vw, 2.0rem);
+    line-height: 2.3rem;
+    
+}
+
+.element__price{
+
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.element__title--green{
+    font-size: clamp(2.0rem, 2.0rem + 1.5vw, 2.5rem);
+    font-weight: 700;
+    color: #3D8168;
+    font-family: var(--fraunces);
+}
+
+.element__paragraph--crossed{
+
+    text-decoration: line-through;
+
+}
+
+.element__buttom{
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    background-color: #3D8168;
+    color: white;
+    border-radius: 8px;
+    min-width: 100%;
+    padding: 20px;
+    font-family: var(--montserrat);
+    font-weight: 600;
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 1rem);
+
 }
 
 
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 600px) {
 
 
     body{
         background-color: black;
 
     }
-    
+
+
 }
 
 
