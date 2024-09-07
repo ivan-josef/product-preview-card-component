@@ -25,7 +25,7 @@
 
 body{
     background-color: var(--cream);
-
+    overflow: hidden;
 }
 
 .container{
@@ -36,15 +36,14 @@ body{
     justify-content: center;
     align-items: center;
 
-
 }
 
 .container__card{
 
     background-color: white;
     max-width: 30rem;
-    min-height: 38rem;
     border-radius: 15px;
+    margin: 10px;
 
 
 }
