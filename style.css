@@ -39,6 +39,7 @@ body{
     justify-content: center;
     align-items: center;
     
+    
 }
 
 .container__card{
@@ -51,6 +52,7 @@ body{
     /* tem q ter esse entendimento: aqui o codigo é para mobile, a viewport é de ate 600px, entao o card esta tendo uma viewport de ate 400px*/
     border-radius: 15px;
     /* antes eu tinha setado uma tag height com 90vh, mas era um dos problemas. a altura esta sendo configurada sempre no body, e no container */
+    overflow: hidden; /* elimina a necessidade de usar border-radius*/
 
 
 }
@@ -59,7 +61,7 @@ img{
 
     block-size: auto;
     object-fit: cover;
-    border-radius: 15px 15px 0px 0px;
+    flex: 1 0 50%;
     max-inline-size: 100%;
     height: auto;
     
@@ -93,7 +95,7 @@ img{
     font-family: var(--fraunces);
     padding: 15px 1px;
     font-size: clamp(2.0rem, 2.0rem + 1.5vw, 2.0rem);
-    line-height: 2.3rem;
+    line-height: 2.1rem;
     
 }
 
@@ -126,7 +128,6 @@ img{
 
     background-color: #3D8168;
     color: white;
-    border-radius: 8px;
     min-width: 100%;
     padding: 20px;
     font-family: var(--montserrat);
@@ -137,13 +138,16 @@ img{
 
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
 
 
-    body{
-        background-color: black;
+    .container__card{
 
+        flex-direction: row;
+        max-width: 37.5rem;
     }
+
+ 
 
 
 }
