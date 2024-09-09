@@ -15,10 +15,13 @@
 <body>
 <main class="container">
   <div class="container__card ">
-    <img srcset="images/image-product-desktop.jpg 600w, images/image-product-mobile.jpg 686w"
-         sizes="(max-width: 768px) 686px, 300px"
-         src="images/image-product-desktop.jpg"
-         alt="A bottle of perfume surrounded by foliage">
+    <picture>
+      <source srcset="images/image-product-desktop.jpg" media="(min-width: 768px)" />
+      <img
+        src="images/image-product-mobile.jpg"
+        alt="A bottle of perfume surrounded by foliage"
+      />
+    </picture>
     <div class="card__element">
       <span class="element__paragraph element__paragraph--spacebt">Perfume</span>
       <h1 class="element__title">Gabrielle Essence Eau De Parfum</h1>

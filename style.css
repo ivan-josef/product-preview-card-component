@@ -33,7 +33,7 @@ body{
 .container{
 
     min-height: 100vh;
-    margin: 10px 0px;
+    margin: 10px 16px;
     
     display: flex;
     justify-content: center;
@@ -61,7 +61,6 @@ img{
 
     block-size: auto;
     object-fit: cover;
-    flex: 1 0 50%;
     max-inline-size: 100%;
     height: auto;
     
@@ -147,6 +146,10 @@ img{
         max-width: 37.5rem;
     }
 
+    img{
+
+        height: 100%;
+    }
  
 
 
